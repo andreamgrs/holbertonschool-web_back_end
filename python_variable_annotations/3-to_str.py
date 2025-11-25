@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-""" Module for function function to_str that takes
-a float n as argument and returns the string
+""" Module for function to_str that takes a float
+n as argument and returns the string
 representation of the float. """
 
 

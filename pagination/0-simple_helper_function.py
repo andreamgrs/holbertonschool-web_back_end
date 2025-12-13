@@ -2,14 +2,17 @@
 """ Module for  function named index_range that return a tuple """
 import asyncio
 import random
+from typing import Tuple
 
 
-def index_range(max_delay: int = 10) -> float:
+def index_range(page: int, page_size: int) -> Tuple:
     """
-    Async func that waits for a random delay between
-    0 and max_delay (included and float value) seconds
-    and eventually returns it.
+    Function should return a tuple of size two containing
+    a start index and an end index corresponding to the range
+    of indexes.
     """
-    delay = random.uniform(0.0, max_delay)
-    await asyncio.sleep(delay)
-    return delay
+    if page == 1:
+        start = 0
+    start = (page - 1)*page_size
+    end = page * page_size
+    return (start, end)

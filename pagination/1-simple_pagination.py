@@ -16,7 +16,8 @@ class Server:
         self.__dataset = None
 
     def dataset(self) -> List[List]:
-        """Cached dataset
+        """
+        Cached Dataset
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
@@ -27,6 +28,16 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """
+        Docstring for get_page
+        :param self: Description
+        :param page: Description
+        :type page: int
+        :param page_size: Description
+        :type page_size: int
+        :return: Description
+        :rtype: List[List]
+        """
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
         database = self.dataset()

@@ -1,0 +1,1 @@
+In this project we are going to learn about ES6 Basics!

@@ -1,6 +1,5 @@
 export default class Currency {
   constructor(code, name) {
-    // type checks during obj creation
     if (typeof code !== 'string') {
       throw new TypeError('Code must be a string');
     }
@@ -8,12 +7,10 @@ export default class Currency {
       throw new TypeError('Name must be a string');
     }
 
-    // store it
     this._code = code;
     this._name = name;
   }
 
-  // GETTERS AND SETTERS
   get code() { return this._code; }
 
   set code(newCode) {

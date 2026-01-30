@@ -16,12 +16,18 @@ export default class Currency {
     return this._code
   }
   set (newCode) {
+    if (typeof newCode !== 'string') {
+      throw new TypeError('code must be a string');
+    }
     return this._code = newCode
   }
   get (name) {
     return this._name
   }
   set (newName) {
+    if (typeof newName !== 'string') {
+      throw new TypeError('name must be a string');
+    }
     return this._name = newName
   }
 

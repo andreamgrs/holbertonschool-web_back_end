@@ -11,8 +11,6 @@ const app = http.createServer((req, res) => {
   res.end('Hello Holberton School!');
 });
 
-app.listen(PORT, 'localhost', () => {
-  console.log(`App server running at http://localhost:${PORT}/`);
-});
+app.listen(PORT);
 
 module.exports = app;

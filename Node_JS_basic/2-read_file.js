@@ -12,7 +12,7 @@ function countStudents(path) {
     const fields = {};
 
     students.forEach((line) => {
-      //split the CSV
+      // split the CSV
       const parts = line.split(',');
       const firstname = parts[0];
       const field = parts[3];
@@ -24,11 +24,13 @@ function countStudents(path) {
     });
 
     for (const field in fields) {
-      console.log(
-        `Number of students in ${field}: ${
-          fields[field].length
-        }. List: ${fields[field].join(', ')}`,
-      );
+      if (fields[field]) {
+        console.log(
+          `Number of students in ${field}: ${
+            fields[field].length
+          }. List: ${fields[field].join(', ')}`,
+        );
+      }
     }
   } catch (err) {
     throw new Error('Cannot load the database');
